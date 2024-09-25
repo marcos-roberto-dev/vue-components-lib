@@ -1,0 +1,59 @@
+{
+  "name": "@test/lib-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "./dist/lib-components.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/lib-components.js",
+      "require": "./dist/lib-components.umd.cjs",
+      "types": "./dist/types/main.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/types/main.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "dependencies": {
+    "vue": "^3.4.37",
+    "vuetify": "^3.7.2"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-backgrounds": "^8.3.3",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/addon-onboarding": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/test": "^8.3.3",
+    "@storybook/vue3": "^8.3.3",
+    "@storybook/vue3-vite": "^8.3.3",
+    "@types/node": "^22.7.0",
+    "@types/webfontloader": "^1.6.38",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vitest/coverage-v8": "^2.1.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^25.0.1",
+    "resize-observer-polyfill": "^1.5.1",
+    "storybook": "^8.3.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.2",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vitest": "^2.1.1",
+    "vue-tsc": "^2.0.29",
+    "webfontloader": "^1.6.28"
+  }
+}
